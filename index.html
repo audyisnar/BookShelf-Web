@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Rak BukuQuu App</title>
+</head>
+<body>
+    <header>
+        <h1 class="titleApp">Rak BukuQuu</h1>
+    </header>
+    <main>
+        <div class="container-flex-row">
+            <section class="input-section shadow">
+                <h2 class="title-input-section">Masukkan Data Buku</h2>
+                <form id="inputBook">
+                    <div class="input">
+                        <label for="inputTitle">Judul</label>
+                        <input id="inputTitle" type="text" placeholder="Judul Buku" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputAuthor">Penulis</label>
+                        <input id="inputAuthor" type="text" placeholder="Penulis Buku" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputYear">Tahun</label>
+                        <input id="inputYear" type="number" placeholder="Tahun Terbit" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputIsComplete">Selesai dibaca</label>
+                        <input id="inputIsComplete" type="checkbox">
+                    </div>
+                    <button id="bookSubmit" type="submit">Submit</button>
+                </form>
+            </section>
+            <div class="container-flex-column">
+                <section class="search-section">
+                    <h2>Hai, Jangan Lupa Selesaikan Bacaanmu!</h2>
+                    <form id="searchBook">
+                        <!-- <label for="searchTitle">Judul</label> -->
+                        <input id="searchTitle" type="text" placeholder="Cari Judul Buku">
+                        <button id="searchSubmit" type="submit">Cari</button>
+                    </form>
+                </section>
+                <section class="bookshelf shadow">
+                    <h2 class="bookshelf-header">Belum selesai dibaca</h2>
+                    <div id="uncompleteBookshelfList" class="book_list">
+                    </div>
+                </section>
+                <section class="bookshelf shadow">
+                    <h2 class="bookshelf-header">Selesai dibaca</h2>
+                    <div id="completeBookshelfList" class="book_list">
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="confirmationModal" class="modal">
+            <div id="contentModal" class="modal-content">
+                <!-- <span id="tutup">&times;</span> -->
+                <p>Apakah Anda yakin ingin menghapus buku "<span id="titleBook"></span>" ?</p>
+                <div id="confirmationAction">
+                    <button id="cancelDelete" class="batalAction">Batal</button>
+                    <button id="delete"class="hapusAction">Hapus</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
